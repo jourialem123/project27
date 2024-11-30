@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project27</title>
+</head>
+<body>
+    <h2></h2>
+    <p id="numbers"></p>
+    <p id="p5"></p>
+    <p id="veggies"></p>
+    <button onclick="ascending()">Acending order</button>
+    <button onclick="decending()">Decending order</button>
+    <button onclick="strsort()">Sort the vegetables alphebatically</button>
+    <button onclick="strreverse()">Sort the vegetables in reverse</button>
+    
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    
+    <script>
+        var num=[23,76,34,9,2,8,27,37,46];
+        var vegetables=["tomato","potato","cucomber","pepper","carrot","brocolli"];
+        document.getElementById("numbers").innerHTML="The numbers are "+ num;
+        document.getElementById("veggies").innerHTML="The vegetables are "+vegetables
+        function ascending(){
+            n.sort(function(a,b){return a-b});
+            document.getElementById("p1").innerHTML=n;
+        }
+        function decending(){
+            n.sort(function(a,b){return b-a});
+            document.getElementById("p2").innerHTML=n;
+        }
+        function strsort(){
+            vegetables.sort();
+            document.getElementById("p3").innerHTML=vegetables;
+        }
+        function strreverse(){
+            vegetables.reverse();
+            document.getElementById("p4").innerHTML=vegetables;
+        }
+        function product(a){
+            return a*10;
+        }
+        var n=num.map (product);
+        document.getElementById("p5").innerHTML="The numbers times 10:-"+"<br>"+n;
+    </script>
+</html>
